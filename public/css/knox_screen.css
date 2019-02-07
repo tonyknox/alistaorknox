@@ -1,0 +1,29 @@
+.caption
+{
+    float: left;
+    display: inline-block;
+    font-size:80%;
+}
+.block { display: block; }
+.right { float: right;padding-left:8px;}
+.centre {float:left;padding-left:8px}
+.centre_one {position:relative;margin: 0 auto;}
+.left {float: left; padding-right:8px;}
+.w10 {width: 10%;} .w15  {width: 15%;}
+.w20 {width: 20%;} .w25  {width: 25%;} 
+.w30 {width: 30%;} .w33  {width: 32.6%;} .w32  {width: 32%;}.w35  {width: 35%;}
+.w40 {width: 40%;} .w45  {width: 45%;}   .w49  {width: 49.55%;} 
+.w50 {width: 50%;} .w55  {width: 55%;}
+.w60 {width: 60%;} .w65  {width: 65%;} 
+.w70 {width: 70%;} .w75  {width: 75%;}
+.w80 {width: 80%;} .w85  {width: 85%;} 
+.w90 {width: 90%;} .w95  {width: 95%;} 
+.w100 {width: 100%; padding: 0px;}
+h1,h2,h3,h4,h5,h6{
+  font-family:"helvetica Neue";
+  font-variant:Medium;
+}
+.th, .td{
+	vertical-align:top;
+	padding:4px;
+}
