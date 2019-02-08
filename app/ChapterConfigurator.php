@@ -5,7 +5,7 @@ namespace App;
 use ScoutElastic\IndexConfigurator;
 use ScoutElastic\Migratable;
 
-class ProjectIndexConfigurator extends IndexConfigurator
+class ChapterConfigurator extends IndexConfigurator
 {
     use Migratable;
 

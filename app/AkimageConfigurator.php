@@ -5,7 +5,7 @@ namespace App;
 use ScoutElastic\IndexConfigurator;
 use ScoutElastic\Migratable;
 
-class BookIndexConfigurator extends IndexConfigurator
+class AkimageConfigurator extends IndexConfigurator
 {
     use Migratable;
 
