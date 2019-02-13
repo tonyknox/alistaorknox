@@ -1,11 +1,11 @@
 @extends('layouts/app')
 
 @section('content')
-
+	
 	<div class="row">
 <!-- col 1 - sidebar -->
 				
-		<div class="d-none d-sm-block col-2">
+		<div class="d-none d-sm-block col-3">
 			
 			<h5>Chapters</h5>
 		
@@ -16,11 +16,13 @@
 		</div>
 
 		<!-- col 2 - main content -->
-		<div class="col">	
+		<div class="col" style="max-width:520px;">	
 
 			@include('includes.searches', ['tble' => 'SearchChapters'])
 				
 			<h2>{!! $bks->bkname !!}
+			<h5>Author: {{ $bks->author }}</h5>
+			<br />
 			
 			<h3>{!! $chapter->chapname !!}</h3>
 
