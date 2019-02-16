@@ -24,7 +24,7 @@
 							<img class="img-fluid max-width:100% height:auto" src="{{$bk->thumb}}" alt="{{$bk->bkname}}"  /><br /><br />
 						</div>
 							
-						<div class="col">
+						<div class="col" style="max-width:500px">
 						<!-- book info -->
 							<br />
 							<h5><a href="{{ action('BooksController@show', [$bk->bkid]) }}">{!!  $bk->bkname !!}</a></h5>

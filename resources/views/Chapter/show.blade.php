@@ -16,7 +16,7 @@
 		</div>
 
 		<!-- col 2 - main content -->
-		<div class="col hyphenate" style="max-width:500px; text-align:justify;">	
+		<div class="col hyphenate"  style="max-width:500px; text-align:justify;">	
 
 			@include('includes.searches', ['tble' => 'SearchChapters'])
 				
@@ -26,7 +26,7 @@
 			
 			<h3>{!! $chapter->chapname !!}</h3>
 
-			<p class="hyphenate">
+			<p>
 				{!! $chapter->chapinfo ?? '' !!}	
 			</p>
 

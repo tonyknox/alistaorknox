@@ -13,7 +13,7 @@
 		</div>
 	</div>	<!-- end col 1 -->
 
-	<div class="col"> <!-- col 2 -->
+	<div class="col" style="max-width:540px"> <!-- col 2 -->
 
 		@include('includes.searches', ['tble' => 'SearchChapters'])
 

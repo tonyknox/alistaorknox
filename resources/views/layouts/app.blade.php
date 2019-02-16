@@ -27,12 +27,12 @@
     <script src="/js/picturefill.min.js" async></script>
     <script src="/js/image-scale.js" type="text/javascript"></script>
     <style>
-    .hyphenate {
-        -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-        hyphens: auto;
-    }
-</style>
+        .hyphenate {
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+        }
+    </style>
 </head>
 <body>
     <div id="app">

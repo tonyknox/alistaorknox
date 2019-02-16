@@ -15,7 +15,7 @@
 						{{ $dir->dirid }} 
 					</div>
 
-					<div class="col">
+					<div class="col" style]"max-width:500px">
 						
 						<h4><a href="{{ action('DirectoriesController@show', [$dir->dirid]) }}">{{  $dir->dirname }}</a></h4> 
 						@if (Auth::check())<a href="{{action('DirectoriesController@edit', [$dir->dirid])}}">( Edit )</a>@endif
