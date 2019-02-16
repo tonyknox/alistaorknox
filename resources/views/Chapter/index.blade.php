@@ -14,7 +14,7 @@
 
 	</div>
 
-	<div class="col"> <!-- col 2 -->
+	<div class="col">  <!-- col 2 -->
 		@include('includes.searches', ['tble' => 'SearchChapters'])
 	
 		@if( isset($noresult))
@@ -25,7 +25,8 @@
 				@foreach ($chapter as $chap)
 					
 					<p>
-						<strong><a href="{!! action('ChaptersController@show', [$chap->chapid]) !!}">{!!  $chap->chapname !!}</a></strong><br /> {!! $info  = abbreviate($chap->chapinfo,$chap->chapid,'chapters',240) !!}
+						<strong><a href="{!! action('ChaptersController@show', [$chap->chapid]) !!}">{!!  $chap->chapname !!}</a></strong><br /> 
+						{!! $info  = abbreviate($chap->chapinfo,$chap->chapid,'chapters',240) !!}
 
 						@if (Auth::check())
 							<a href="{!!action('ChaptersController@edit', [$chap->chapid])!!}">( Edit )</a>

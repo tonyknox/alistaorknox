@@ -13,7 +13,7 @@
 			@endforeach
 		</div>
 
-		<div class="col"> <!-- col 2 - main content -->
+		<div class="col" style="max-width:520px;"> <!-- col 2 - main content -->
 
 			@include('includes.searches', ['tble' => 'SearchPeople'])
 			<h1>
@@ -25,7 +25,8 @@
 			</h1>
 
 			
-			<div class="block w50 right">
+			<div class="block w60
+			 right">
 				<figure class="figure">
 					<img src="{{$person->ppimgpath}}/{{$person->ppimgname}}.{{$person->ppimgext}}" class="figure-img img-fluid alt="{{$person->ppalt}}" width="100%" />
 					<figcaption class="figure-caption">{{$person->ppcaption}}</figcaption>

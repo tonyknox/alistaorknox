@@ -26,6 +26,13 @@
     </script>
     <script src="/js/picturefill.min.js" async></script>
     <script src="/js/image-scale.js" type="text/javascript"></script>
+    <style>
+    .hyphenate {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+    }
+</style>
 </head>
 <body>
     <div id="app">
@@ -51,7 +58,31 @@
                                 <li><a class="nav-link" href="{{ action('DirectoriesController@show', [27]) }}">Plans</a></li>
                                 <li><a class="nav-link" href="{{ action('DiysController@index') }}">DIY</a></li>
                                 <li><a class="nav-link" href="{{ action('BooksController@index') }}">Publications</a></li>
-                                <li><a class="nav-link" href="{{ action('DirectoriesController@show', [1])}}">Bio</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="/#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Biography
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="/directories/1">Bio</a>
+                                        <a class="dropdown-item" href="/directories/6">Childhood</a>
+                                        <a class="dropdown-item" href="/directories/7">The Bank</a>
+                                        <a class="dropdown-item" href="/directories/8">Adolesence</a>
+                                        <a class="dropdown-item" href="/directories/9">Marriage</a>
+                                        <a class="dropdown-item" href="/directories/10">The Navy</a>
+                                        <a class="dropdown-item" href="/directories/11">First Buildings</a>
+                                        <a class="dropdown-item" href="/directories/12">Bohemian Associations</a>
+                                        <a class="dropdown-item" href="/directories/13">Early Houses</a>
+                                        <a class="dropdown-item" href="/directories/14">Margot</a>
+                                        <a class="dropdown-item" href="/directories/18">Professional Building</a>
+                                        <a class="dropdown-item" href="/directories/15">Hard Times</a>
+                                        <a class="dropdown-item" href="/directories/17">The Knox House</a>
+                                        <a class="dropdown-item" href="/directories/16">Landscape Architecture</a>
+                                        <a class="dropdown-item" href="/directories/20">Helping Hand</a>
+                                        <a class="dropdown-item" href="/directories/19">Eltham Shire Council</a>
+                                        <a class="dropdown-item" href="/directories/24">Mature Housess</a>
+                                        <a class="dropdown-item" href="/directories/25">Postscript</a>
+                                    </div>
+                                </li>
                                 <li><a class="nav-link" href="{{ action('PeopleController@index') }}">People</a></li>
                                 <li><a class="nav-link" href="{{ action('DirectoriesController@show', [28]) }}">Contact</a></li>
                             </ul>

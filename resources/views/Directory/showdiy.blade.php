@@ -10,7 +10,7 @@
 
 
 		
-		<div class="col">
+		<div class="col" style="max-width:520px">
 			@include('includes.searches', ['tble' => 'SearchChapters'])
 			
 				@if($directory->dirid == 31)

@@ -4,53 +4,54 @@
 
 	<div class="row">
 	<!-- start col 1 -->
-		<div class="d-none d-sm-block col-2" style="background-color: #eee"> <!-- col 1 -->
-
+		<div class="d-none d-sm-block col-2" style="background-color: #eee"> 
 			@include('includes.menus.books')	
-
-		</div>	
+		</div>
 	<!-- end col 1 -->
+
 	<!-- start col 2 -->
-		<div class="col"> 
+		<div class="col" > 
 			
 			@include('includes.searches', ['tble' => 'SearchChapters'])
 
-			<h1 style="margin-top:-4px;">Books &amp; Articles</h1>
+			<h1 style="margin-top:-4px;padding-bottom:16px">Books &amp; Articles</h1>
+			
+				@foreach ($book as $bk)
+					<div class="row"> 
+						<div class="col-sm-3"  >
+						<!-- image -->
+						<br />
+							<img class="img-fluid max-width:100% height:auto" src="{{$bk->thumb}}" alt="{{$bk->bkname}}"  /><br /><br />
+						</div>
+							
+						<div class="col">
+						<!-- book info -->
+							<br />
+							<h5><a href="{{ action('BooksController@show', [$bk->bkid]) }}">{!!  $bk->bkname !!}</a></h5>
+							
+							@if(strlen($bk->author))	
+								Author: {!! $bk->author  !!}<br />
+							@endif
 
-			@foreach ($book as $bk)
-				<div class="row"> 
-					<div class="col-sm-3">
-					<!-- image -->
-						<img src="{{$bk->thumb}}" alt="{{$bk->bkname}}"  style="max-width:150px;max-height:150px" /><br /><br />
+							@if(count($bk->chapters))
+								@foreach($bk->chapters as $chap)
+									<small><a href="{{action('ChaptersController@show', [$chap->chapid])}}">{!! $chap->chapname !!}</a>, </small>	
+								@endforeach
+							@endif
+						</div>
+						<br /><br />
 					</div>
-						
-					<div class="col-sm-9">
-					<!-- book info -->
-						<big><strong><a href="{{ action('BooksController@show', [$bk->bkid]) }}">{!!  $bk->bkname !!}</a></strong></big>
-						
-						@if(strlen($bk->author))	
-							<br />Author: {!! $bk->author  !!}<br />
-						@endif
-
-						@if(count($bk->chapters))
-							@foreach($bk->chapters as $chap)
-								<small><a href="{{action('ChaptersController@show', [$chap->chapid])}}">{!! $chap->chapname !!}</a>, </small>	
-							@endforeach
-						@endif
-						
-					</div>
-				</div>
-
-			@endforeach
-					
+				@endforeach
 			{!! $book->render() !!}	
-	<!-- end col 2 -->
-	<!-- start col 3 -->
-		<div class="d-none d-sm-block col-1"> 
-
 		</div>	
-	<!-- end col3 -->
+	<!-- end col 2 -->	
+		
+
+		<div class="col-2">
+
+		</div>
 	</div>
+
 	
 	@include ('errors.list')
 

@@ -11,7 +11,7 @@
 @section('content')
 	
 
-<div class="row"><div class="col">
+<div class="row"><div class="col" style="max-width"520px>
 	
 	<h1><a href="/buildings">The Buildings of Alistair Knox</a></h1>
 
