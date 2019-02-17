@@ -13,7 +13,7 @@
 			@endforeach
 		</div>
 
-		<div class="col" style="max-width:520px;"> <!-- col 2 - main content -->
+		<div class="col hyphenate" style="max-width:520px;text-align:justify"> <!-- col 2 - main content -->
 
 			@include('includes.searches', ['tble' => 'SearchPeople'])
 			<h1>

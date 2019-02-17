@@ -8,7 +8,7 @@
 					@include('includes.menus.bio')	
 			</div>
 		
-		<div class="col" style="max-width:520px">
+		<div class="col hyphenate" style="max-width:520px;text-align:justify">
 			@include('includes.searches', ['tble' => 'SearchChapters'])
 			
 				@if($directory->dirid == 31)
