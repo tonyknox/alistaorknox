@@ -32,7 +32,7 @@
 						
 						@if(count($build->akimages))
 			
-							<img style="max-width:150px" src="{{$build->akimages[0]['imgpath']}}/{{$build->akimages[0]['imgname']}}.{{$build->akimages[0]['imgextension']}}" alt="{{$build->akimages[0]['alt'] }}" width="100%" max-width="175px" /><br /><br />
+							<img style="max-width:150px" src="{{$build->akimages[0]['imgpath']}}/{{$build->akimages[0]['imgname']}}.{{$build->akimages[0]['imgextension']}}" alt="{{$build->akimages[0]['alt'] }}" width="100%" /><br /><br />
 
 						@elseif(count($build->plans))
 							

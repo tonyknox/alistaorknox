@@ -9,7 +9,7 @@
 @section('content')
 	
 
-<div style="margin-left:2%;margin-right:2%">
+<div>
 	@include('includes.searches', ['tble' => 'SearchImages'])
 
 	<h1><a href="/akimages">Images</a></h1>

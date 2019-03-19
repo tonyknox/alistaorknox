@@ -13,9 +13,10 @@
 			@endforeach
 		</div>
 
-		<div class="col hyphenate" style="max-width:520px;text-align:justify"> <!-- col 2 - main content -->
-
-			@include('includes.searches', ['tble' => 'SearchPeople'])
+		<div class="col" style="max-width:520px;"> <!-- col 2 - main content -->
+			<div class="d-sm-none">
+				@include('includes.searches', ['tble' => 'SearchPeople'])
+			</div>
 			<h1>
 				@if(isset($person->ppfirst_name))
 					{{ $person->ppfirst_name }} {{ $person->ppname }}
@@ -33,7 +34,9 @@
 				</figure>
 			</div>
 			<p>
-				{!! $person->ppinfo ?? '' !!}	
+				<div class="hyphenate" style="text-align:justify">
+					{!! $person->ppinfo ?? '' !!}	
+				</div>
 			</p>
 			<span style="text-align:center">@include('/includes.nextPrevMin',['tble'=>'People', 'editTable'=>$person->ppid, 'id'=>'ppid', 'text'=>'Person'])</span>
 		</div>		
@@ -41,8 +44,8 @@
 		<!-- col 1 - sidebar -->
 		
 	<!-- col 3 - search -->
-		<div class="col-1">
-			
+		<div class="d-none d-sm-block col-2">
+		@include('includes.searches', ['tble' => 'SearchPeople'])
 		</div>
 	</div>
 <!-- - - - - -->	

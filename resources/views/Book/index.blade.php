@@ -11,8 +11,10 @@
 
 	<!-- start col 2 -->
 		<div class="col" > 
-			
-			@include('includes.searches', ['tble' => 'SearchChapters'])
+
+			<div class="d-sm-none">
+				@include('includes.searches', ['tble' => 'SearchChapters'])
+			</div>
 
 			<h1 style="margin-top:-4px;padding-bottom:16px">Books &amp; Articles</h1>
 			
@@ -24,7 +26,7 @@
 							<img class="img-fluid max-width:100% height:auto" src="{{$bk->thumb}}" alt="{{$bk->bkname}}"  /><br /><br />
 						</div>
 							
-						<div class="col" style="max-width:500px">
+						<div class="col hyphenate" style="max-width:520px; text-align:justify">
 						<!-- book info -->
 							<br />
 							<h5><a href="{{ action('BooksController@show', [$bk->bkid]) }}">{!!  $bk->bkname !!}</a></h5>
@@ -47,8 +49,8 @@
 	<!-- end col 2 -->	
 		
 
-		<div class="col-2">
-
+		<div class="d-none d-sm-block col-2">
+			@include('includes.searches', ['tble' => 'SearchChapters'])
 		</div>
 	</div>
 

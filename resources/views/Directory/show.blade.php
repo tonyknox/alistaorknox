@@ -8,22 +8,23 @@
 					@include('includes.menus.bio')	
 			</div>
 		
-		<div class="col hyphenate" style="max-width:520px;text-align:justify">
-			@include('includes.searches', ['tble' => 'SearchChapters'])
-			
+		<div class="col" style="max-width:520px;">
+			<div class="d-sm-none">
+				@include('includes.searches', ['tble' => 'SearchChapters'])<br />
+			</div>
 				@if($directory->dirid == 31)
 					<h1>{!! $directory->dirheader !!}</h1>
 				@else
 					<h3>{!! $directory->dirheader !!}</h3>
 				@endif
-			
-				{!! isset($directory->section_2) ? $directory->section_2." " : '' !!}
-				
+				<div class="hyphenate" style="text-align:justify;"> 
+					{!! isset($directory->section_2) ? $directory->section_2." " : '' !!}
+				</div>
 				<br />				
 		</div>	
 	<!-- </div>		 -->
 	<div class="d-none d-sm-block col-sm-1">
-
+		@include('includes.searches', ['tble' => 'SearchChapters'])
 	</div>
 </div>
 @stop

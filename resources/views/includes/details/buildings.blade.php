@@ -18,10 +18,14 @@
 @endif
 <!-- drawing info -->
 @if(strlen($building->builddescription)>1)<br />
-	<strong>Description:</strong> {!!$building->builddescription!!}
+	<div class="hyphenate" style="max-width:520px;text-align:justify;">
+		<strong>Description:</strong> {!!$building->builddescription!!}
+	</div>
 @endif
 @if(strlen($building->builddescription2)>1)<br />
-	<strong>Description:</strong> {!!$building->builddescription2!!}
+	<div class="hyphenate" style="max-width:520px;text-align:justify;">
+		<strong>Description:</strong> {!!$building->builddescription2!!}
+	</div>
 @endif
 @if(strlen($building->drawinglocation)>1)<br />
 	<strong>Drawing Location:</strong> {!!$building->drawinglocation!!}
@@ -51,7 +55,9 @@
 @endif
 <!--notes-->
 @if(strlen($building->buildnote)>1)<br />
-	<strong>Notes:</strong> {!!$building->buildnote!!}
+	<div class="hyphenate" style="max-width:520px;text-align:justify;">
+		<strong>Notes:</strong> {!!$building->buildnote!!}
+	</div>
 @endif
 @if(strlen($building->keywords)>1)<br />
 	<strong>Keywords:</strong> {!!$building->keywords!!}

@@ -13,12 +13,14 @@
 		</div>
 	</div>	<!-- end col 1 -->
 
-	<div class="col" style="max-width:540px"> <!-- col 2 -->
+	<div class="col" style="max-width:520px"> <!-- col 2 -->
 
-		@include('includes.searches', ['tble' => 'SearchChapters'])
+		<div class="d-sm-none">
+			@include('includes.searches', ['tble' => 'SearchChapters'])<br />
+		</div>
 
-		<h1>{!! $book->bkname !!}</h1>
-		<!-- book infi -->
+		<h1>{!! $book->bkname ?? '' !!}</h1>
+		<!-- book info -->
 		<h5>
 			@if($book->author)
 				Author: {!! $book->author !!}<br />
@@ -27,7 +29,9 @@
 				{!! $book->bkdescription !!}<br />
 			@endif
 			@if($book->bkinfo)
-				{!! $book->bkinfo !!}<br />
+				<div class="hyphenate" style="text-align:justify;">
+					{!! $book->bkinfo !!}<br />
+				</div>
 			@endif
 			<br />
 		</h5>
@@ -36,15 +40,19 @@
 		<!-- book contents	 -->
 			@foreach($book->chapters as $chap)	
 				<p>
-					<strong><a href="{!!action('ChaptersController@show', [$chap->chapid])!!}">{!! $chap->chapname !!}</a></strong>
+				<div class="hyphenate" style="text-align:justify;">	
+				<strong><a href="{!!action('ChaptersController@show', [$chap->chapid])!!}">{!! $chap->chapname !!}</a></strong>
 					{!! $info  = abbreviate($chap->chapinfo,$chap->chapid,'chapters',240) !!}
+</div>
 				</p>
 			@endforeach
 			
 		@elseif(count($book->chapters)==1)
 
 			@foreach($book->chapters as $chapter)
-				{!! $chapter->chapinfo !!}
+				<div class="hyphenate" style="text-align:justify;">
+					{!! $chapter->chapinfo !!}
+				</div>
 			@endforeach
 	
 		@endif

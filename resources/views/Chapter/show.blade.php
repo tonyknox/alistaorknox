@@ -16,28 +16,38 @@
 		</div>
 
 		<!-- col 2 - main content -->
-		<div class="col hyphenate"  style="max-width:500px; text-align:justify;">	
+			
 
-			@include('includes.searches', ['tble' => 'SearchChapters'])
-				
-			<h2>{!! $bks->bkname !!}
-			<h5>Author: {{ $bks->author }}</h5>
+		<div class="col"  style="max-width:520px;">	
+			<div class="d-sm-none">
+				@include('includes.searches', ['tble' => 'SearchChapters'])<br />
+			</div>
+
+			<h2 style="text-align:center">{!! $bks->bkname ?? '' !!}</h2>
+			
 			<br />
 			
-			<h3>{!! $chapter->chapname !!}</h3>
+			<h4>{!! $chapter->chapname  ?? '' !!}</h4>
 
-			<p>
-				{!! $chapter->chapinfo ?? '' !!}	
-			</p>
+			<h5>
+				
+					{!! "Author: ".$bks->author  ?? '' !!}
+				
+			</h5>
 
+			<div class="hyphenate" style="hyphenate; text-align:justify;">
+				<p>
+					{!! $chapter->chapinfo ?? '' !!}	
+				</p>
+			</div>
 			<span style="text-align:center">@include('/includes.nextPrev',['tble'=>'Chapters', 'editTable'=>$chapter->chapid, 'id'=>'chapid', 'textBook'=>'Book', 'textChap'=>'Chapter'])</span>
 		
 		</div> 
 	
 <!-- col 3  -->
 
-	<div class="d-none d-sm-block col-1">
-		
+	<div class="d-none d-sm-block col-2">
+		@include('includes.searches', ['tble' => 'SearchChapters'])<br />
 	</div>
 </div>
 
