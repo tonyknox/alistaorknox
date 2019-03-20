@@ -8,9 +8,9 @@
 								
 
 <div class="block" style="max-width:90vh;margin:auto">
-
-	@include('includes.searches', ['tble' => 'SearchImages'])
-
+	<div style="float:right">
+		@include('includes.searches', ['tble' => 'SearchImages'])
+	</div>
 	<picture>
 	   <source srcset='{{ $big }}' media='(min-width: 640px)' > <img src='{{ $small }}' alt="{!! $akimage->alt !!}" width="{{ $width }}" />	
 	</picture> 

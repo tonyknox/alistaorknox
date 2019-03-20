@@ -14,9 +14,9 @@
 	</div>
 
 	<div class="col">	<!-- col 2 - main content -->
-		
-		@include('includes.searches', ['tble' => 'SearchBuildings'])
-						
+		<div class="d-sm-none">
+			@include('includes.searches', ['tble' => 'SearchBuildings'])<br />
+		</div>		
 		@if(!count($building))
 			<h3>No building matches your query. Try again . . .<br /></h3>
 		@else
@@ -24,7 +24,10 @@
 
 			@include('includes/details.buildings')
 
-
+	</div>
+		<div class="d-none d-sm-block col-2">
+			@include('includes.searches', ['tble' => 'SearchBuildings'])<br />
+		</div>
 			<div class="row">
 						
 				<!-- images -->
