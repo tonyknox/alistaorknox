@@ -14,9 +14,12 @@
 	<picture>
 	   <source srcset='{{ $big }}' media='(min-width: 640px)' > <img src='{{ $small }}' alt="{!! $akimage->alt !!}" width="{{ $width }}" />	
 	</picture> 
-
+<br />
 	<div class="caption">
-		{!! $akimage->caption !!}. Photo: {!! $akimage->credit !!}</i> 
+		@if(strlen($akimage->caption))
+			{!! $akimage->caption!!}. 
+		@endif
+		{!! "Photo: ",$akimage->credit ?? '' !!}</i> 
 	</div>
 	
 	<br /><br />
