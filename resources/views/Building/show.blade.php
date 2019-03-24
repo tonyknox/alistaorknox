@@ -37,7 +37,7 @@
 					@if($building->akimages)
 						@foreach($building->akimages as $img)
 							<div class="left" style="max-width:175px;height:190px;" >
-								<a href="{!! action('AkimagesController@show', [$img->imgid]) !!}">
+								<a href="{!! action('AkimagesController@show', [$img->imgid]) !!}"> 
 									<img src="{!! $img->imgpath !!}/{!! $img->imgname !!}.{!! $img->imgextension !!}" alt="{!! $img->alt !!}" />
 									<span class="caption">
 										{!! $img->caption !!}  @if(strlen($img->credit))<i>Photo: {{ $img->credit }}</i>@endif
