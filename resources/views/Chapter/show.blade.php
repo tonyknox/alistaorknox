@@ -27,8 +27,9 @@
 			
 			<br />
 			
-			<h4>{!! $chapter->chapname  ?? '' !!}</h4>
-
+			@if(! preg_match("/$chapter->chapname/",$bks->bkname))
+				<h4>{!! $chapter->chapname  ?? '' !!}</h4>
+			@endif
 			<h5>
 				
 					{!! "Author: ".$bks->author  ?? '' !!}

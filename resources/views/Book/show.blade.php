@@ -5,7 +5,7 @@
 	
 	<div class="d-none d-sm-block col-3"> <!-- col 1 -->
 		<div style="background-color: #eee">
-			<h5>Other Books</h5>
+			<h5>Other Publications</h5>
 			@foreach($bks as $bk)
 				<p><a href="{{action('BooksController@show',[$bk->bkid])}}">{{ $bk->bkname }}</a></p>
 			@endforeach

@@ -11,7 +11,7 @@ class Book extends Model
 
     protected $primaryKey = 'bkid';
 
-    protected $fillable = ['bkname', 'bkdescription', 'bkdescription', 'author', 'book_sort','thumb','bktype'];
+    protected $fillable = ['bkname', 'bkdescription', 'bkinfo', 'author', 'book_sort','thumb','bktype'];
 
   
     public function chapters()
