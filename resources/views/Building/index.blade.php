@@ -11,14 +11,17 @@
 
 	<div class="col"> <!-- col 2 -->
 
-		@include('includes.searches', ['tble' => 'SearchBuildings'])
+		
 		<h1>Buildings</h1>			
 
+		@include('includes.searches', ['tble' => 'SearchBuildings'])
 		<div class="dropdown">
 			<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
 				Buildings
 			</button>
 			@include('includes.menus.buildings-dropdown')
+			
+			
 		</div>
 
 		@if( isset($noresult))
@@ -76,9 +79,8 @@
 		@endif
 	</div>
 	<div class="col-2">
-		<div class="d-none d-sm-block">
-		
-			
+	<div class="d-none d-sm-block col-2">
+			@include('includes.searches', ['tble' => 'SearchChapters'])
 		</div>
 	</div>
 	

@@ -25,32 +25,33 @@
 			@include('includes/details.buildings')
 
 	</div>
-		<div class="d-none d-sm-block col-2">
-			@include('includes.searches', ['tble' => 'SearchBuildings'])<br />
-		</div>
-			<div class="row">
+	<div class="d-none d-sm-block col-2">
+		@include('includes.searches', ['tble' => 'SearchBuildings'])<br />
+	</div>
+</div>	
+
+<div class="row">
 						
-				<!-- images -->
+		<!-- images -->
 				
-				<div class="col">
-					<br />
-					@if($building->akimages)
-						@foreach($building->akimages as $img)
-							<div class="left" style="max-width:175px;height:190px;" >
-								<a href="{!! action('AkimagesController@show', [$img->imgid]) !!}"> 
-									<img src="{!! $img->imgpath !!}/{!! $img->imgname !!}.{!! $img->imgextension !!}" alt="{!! $img->alt !!}" />
-									<span class="caption">
-										{!! $img->caption !!}  @if(strlen($img->credit))<i>Photo: {{ $img->credit }}</i>@endif
-									</span>
-								</a>
-							</div>			
-						@endforeach
-					@endif
-				</div>
-			</div>
+	<div class="col-12" style="text-align:center">
+		<br />
+		@if($building->akimages)
+			@foreach($building->akimages as $img)
+				<div style="max-width:175px;height:190px;display:inline-block" >
+					<a href="{!! action('AkimagesController@show', [$img->imgid]) !!}"> 
+						<img src="{!! $img->imgpath !!}/{!! $img->imgname !!}.{!! $img->imgextension !!}" alt="{!! $img->alt !!}" />
+						<span class="caption">
+							{!! $img->caption !!}  @if(strlen($img->credit))<i>Photo: {{ $img->credit }}</i>@endif
+						</span>
+					</a>
+				</div>			
+			@endforeach
 		@endif
 	</div>
 </div>
+		@endif
+
 <span style="text-align:center">@include('/includes.nextPrevMin',['tble'=>'Buildings', 'editTable'=>$building->buildid, 'id'=>'buildid', 'text'=>'Building'])</span>
 	
 

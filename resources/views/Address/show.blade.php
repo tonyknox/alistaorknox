@@ -6,8 +6,8 @@
 		
 	<div class="col-4">
 	
-		@if($addresses->building)
-			@foreach($addresses as $address)
+		@if($address->building)
+			@foreach($address as $address)
 				<a href="{{action('BuildingsController@show', [$address->building_buildid])}}">@include('includes.address')</a><br />
 			@endforeach
 		@endif
@@ -15,7 +15,7 @@
 	<div class="col-7">
 
 		<h3>
-			@if(count($addresses->buildings))
+			@if(count($address->buildings))
 				<a href="{{action('BuildingsController@show', [$address->building_buildid])}}">{{ $address->buildings->buildname }}</a>
 			@endif
 		</h3>

@@ -49,11 +49,12 @@ class AddressesController extends Controller
     public function show($adr)
     {
         $address = Address::with('buildings')->findOrFail($adr);
+        $addresses = $address;
         // $adr = Address::where('suburb', $address->suburb)->orderBy('street')->get();
 
         list($prevPage,$nextPage) = nextBook('App\Address','adrid',$address->adrid,'');
         
-        return view('Address.show', compact(['address','buildings']))->with('prevPage',$prevPage)->with('nextPage',$nextPage);
+        return view('Address.show', compact(['address','buildings']))->with('prevPage',$prevPage)->with('nextPage',$nextPage)->with('addresses,$addresses');
 
     }
 
